@@ -1,0 +1,399 @@
+.goals-tracker {
+  /* Inherits styles from parent profile section */
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #6c757d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tab-button:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+}
+
+.tab-button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Streak Section */
+.streak-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.streak-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.streak-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.streak-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.streak-card.current {
+  border-color: #ff6b35;
+  background: linear-gradient(135deg, #fff5f3 0%, #ffffff 100%);
+}
+
+.streak-card.longest {
+  border-color: #ffc107;
+  background: linear-gradient(135deg, #fffbf0 0%, #ffffff 100%);
+}
+
+.streak-card.sessions {
+  border-color: #28a745;
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+}
+
+.streak-icon {
+  font-size: 2.5rem;
+  text-align: center;
+  width: 3rem;
+}
+
+.streak-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.streak-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #495057;
+  line-height: 1;
+}
+
+.streak-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.streak-subtitle {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.last-session-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.last-session-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.last-session-date {
+  color: #6c757d;
+}
+
+/* Goals Section */
+.goals-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.goal-card {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.goal-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+.goal-card.completed {
+  border-color: #28a745;
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.goal-info {
+  flex: 1;
+}
+
+.goal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
+  margin: 0 0 0.5rem 0;
+}
+
+.goal-description {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.goal-status {
+  margin-left: 1rem;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.status-icon.completed {
+  background: #d4edda;
+}
+
+.status-icon.pending {
+  background: #fff3cd;
+}
+
+.goal-progress {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 0.75rem;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.progress-current {
+  font-weight: 600;
+  color: #495057;
+}
+
+.progress-target {
+  color: #6c757d;
+}
+
+.progress-percentage {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.goal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.goal-type {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.goal-deadline {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Progress Section */
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chart-container {
+  height: 300px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.progress-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+}
+
+.summary-card h4 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #495057;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tab-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .streak-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .goal-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .goal-status {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+  
+  .goal-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .summary-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    height: 250px;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .streak-card {
+    padding: 1rem;
+  }
+  
+  .streak-icon {
+    font-size: 2rem;
+    width: 2.5rem;
+  }
+  
+  .streak-number {
+    font-size: 1.75rem;
+  }
+  
+  .goal-card {
+    padding: 1rem;
+  }
+  
+  .summary-card {
+    padding: 1rem;
+  }
+  
+  .stat-item {
+    padding: 0.75rem;
+  }
+  
+  .chart-container {
+    height: 200px;
+    padding: 0.5rem;
+  }
+}

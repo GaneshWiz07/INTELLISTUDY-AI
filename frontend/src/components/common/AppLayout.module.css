@@ -1,0 +1,128 @@
+.appLayout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+.sidebar {
+  width: 250px;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: var(--z-fixed);
+  transition: transform var(--transition-normal);
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 250px;
+  padding: var(--spacing-xl);
+  background: var(--bg-secondary);
+  min-height: 100vh;
+  transition: margin-left var(--transition-normal);
+}
+
+.mobileMenuToggle {
+  display: none;
+  position: fixed;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  z-index: calc(var(--z-fixed) + 1);
+  background: var(--bg-primary);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  box-shadow: var(--shadow-md);
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+}
+
+.mobileOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: calc(var(--z-fixed) - 1);
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .appLayout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mainContent {
+    margin-left: 0;
+    padding: var(--spacing-md);
+    padding-top: calc(var(--spacing-md) + var(--touch-target-min) + var(--spacing-md));
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileOverlay.show {
+    display: block;
+  }
+}
+
+/* Small mobile responsive */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw;
+  }
+
+  .mainContent {
+    padding: var(--spacing-sm);
+    padding-top: calc(var(--spacing-sm) + var(--touch-target-min) + var(--spacing-sm));
+  }
+
+  .mobileMenuToggle {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .sidebar {
+    border-right: 2px solid var(--border-dark);
+  }
+  
+  .mobileMenuToggle {
+    border: 3px solid var(--border-dark);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .mainContent,
+  .mobileMenuToggle {
+    transition: none;
+  }
+}

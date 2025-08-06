@@ -1,0 +1,82 @@
+.indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  max-width: 250px;
+}
+
+.offline {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.syncing {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 16px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.syncing .icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  line-height: 1.3;
+}
+
+.queueCount {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .indicator {
+    left: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    padding: 6px 10px;
+    max-width: 200px;
+  }
+  
+  .icon {
+    font-size: 14px;
+  }
+}

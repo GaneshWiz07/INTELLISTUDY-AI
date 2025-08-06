@@ -1,0 +1,145 @@
+.admin-dashboard {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.admin-dashboard__header {
+  margin-bottom: 2rem;
+}
+
+.admin-dashboard__header h1 {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.admin-dashboard__welcome {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.admin-dashboard__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.admin-dashboard__overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.overview-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.overview-card h3 {
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.overview-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.stat-value {
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-time {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.activity-text {
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.admin-dashboard__main {
+  min-height: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-dashboard__content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .admin-dashboard__overview {
+    order: 2;
+  }
+
+  .admin-dashboard__main {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .admin-dashboard__header h1 {
+    font-size: 2rem;
+  }
+
+  .overview-card {
+    padding: 1rem;
+  }
+
+  .stat-item {
+    padding: 0.5rem 0;
+  }
+}

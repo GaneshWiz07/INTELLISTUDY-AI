@@ -1,0 +1,94 @@
+.attention-trend-chart {
+  width: 100%;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.legend-color.high {
+  background-color: #10b981;
+}
+
+.legend-color.medium {
+  background-color: #f59e0b;
+}
+
+.legend-color.low {
+  background-color: #ef4444;
+}
+
+.chart-insights {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.insight {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.insight strong {
+  display: block;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+  
+  .chart-legend {
+    gap: 1rem;
+  }
+  
+  .chart-insights {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .insight {
+    text-align: center;
+  }
+  
+  .insight strong {
+    display: inline;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
+}

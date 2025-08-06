@@ -1,0 +1,384 @@
+.user-management {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.user-management__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-management__header h2 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.user-count {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.user-management__controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-box {
+  min-width: 150px;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.user-management__table {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.users-table th {
+  background: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.users-table td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+.users-table tr:hover {
+  background: #f9fafb;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.user-email {
+  color: #666;
+}
+
+.user-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.role-badge--student {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.role-badge--admin {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.user-preferences {
+  font-size: 0.85rem;
+}
+
+.preference-item {
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.preference-item:last-child {
+  margin-bottom: 0;
+}
+
+.user-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn--view {
+  background: #e0f2fe;
+  color: #0277bd;
+}
+
+.action-btn--view:hover {
+  background: #b3e5fc;
+}
+
+.action-btn--edit {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.action-btn--edit:hover {
+  background: #e9d5ff;
+}
+
+.action-btn--delete {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.action-btn--delete:hover {
+  background: #fecaca;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f4f6;
+  border-top: 3px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+/* User Modal Styles */
+.user-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.user-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.user-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-modal__header h3 {
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #1a1a1a;
+}
+
+.user-modal__content {
+  padding: 1.5rem;
+}
+
+.user-detail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.user-detail-row label {
+  font-weight: 500;
+  color: #374151;
+  min-width: 80px;
+}
+
+.user-detail-row span {
+  color: #1a1a1a;
+}
+
+.user-detail-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.user-detail-section h4 {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.preferences-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.preference-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.preference-detail label {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.preference-detail span {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-management {
+    padding: 1rem;
+  }
+  
+  .user-management__controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-box {
+    min-width: auto;
+  }
+  
+  .users-table {
+    font-size: 0.85rem;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .user-actions {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-modal {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .user-modal__header,
+  .user-modal__content {
+    padding: 1rem;
+  }
+}

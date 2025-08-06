@@ -1,0 +1,223 @@
+.webcam-monitor {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.webcam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.webcam-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.webcam-toggle {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.webcam-toggle.enabled {
+  background: #27ae60;
+  color: white;
+}
+
+.webcam-toggle.enabled:hover {
+  background: #229954;
+}
+
+.webcam-toggle.disabled {
+  background: #95a5a6;
+  color: white;
+}
+
+.webcam-toggle.disabled:hover {
+  background: #7f8c8d;
+}
+
+.webcam-container {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+}
+
+.webcam-feed {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.webcam-video {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #27ae60;
+}
+
+.webcam-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 6px 12px;
+  background: rgba(39, 174, 96, 0.1);
+  border-radius: 16px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #95a5a6;
+}
+
+.status-indicator.active {
+  background: #27ae60;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.status-text {
+  font-size: 12px;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.webcam-disabled {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
+}
+
+.disabled-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.webcam-disabled p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.privacy-note {
+  font-size: 14px !important;
+  color: #95a5a6 !important;
+  font-style: italic;
+}
+
+.webcam-error {
+  text-align: center;
+  padding: 40px 20px;
+  color: #e74c3c;
+}
+
+.error-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.retry-button {
+  padding: 8px 16px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.retry-button:hover {
+  background: #c0392b;
+}
+
+.privacy-controls {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.privacy-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.privacy-icon {
+  font-size: 16px;
+}
+
+.privacy-text {
+  font-size: 12px;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .webcam-monitor {
+    padding: 16px;
+  }
+  
+  .webcam-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .webcam-toggle {
+    align-self: center;
+  }
+  
+  .webcam-container {
+    min-height: 160px;
+  }
+  
+  .disabled-icon,
+  .error-icon {
+    font-size: 36px;
+  }
+}

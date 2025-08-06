@@ -1,0 +1,276 @@
+.engagement-controls {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.controls-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.controls-title {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.controls-subtitle {
+  margin: 0;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.engagement-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.engagement-button {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: left;
+}
+
+.engagement-button:hover {
+  border-color: var(--engagement-color);
+  background: rgba(var(--engagement-color-rgb, 102, 126, 234), 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.engagement-button.active {
+  border-color: var(--engagement-color);
+  background: var(--engagement-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.button-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-level {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.button-description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.engagement-button:not(.active) .button-description {
+  color: #666;
+}
+
+.active-indicator {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.indicator-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.current-status {
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.status-icon {
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.status-text {
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.status-text strong {
+  text-transform: capitalize;
+}
+
+.adaptation-hint {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid #667eea;
+}
+
+.hint-icon {
+  font-size: 1rem;
+  margin-right: 0.75rem;
+}
+
+.hint-text {
+  color: #666;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* Color variations for different engagement levels */
+.engagement-button[style*="--engagement-color: #28a745"] {
+  --engagement-color-rgb: 40, 167, 69;
+}
+
+.engagement-button[style*="--engagement-color: #ffc107"] {
+  --engagement-color-rgb: 255, 193, 7;
+}
+
+.engagement-button[style*="--engagement-color: #dc3545"] {
+  --engagement-color-rgb: 220, 53, 69;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .engagement-controls {
+    padding: 1rem;
+  }
+  
+  .engagement-button {
+    padding: 0.75rem;
+  }
+  
+  .button-icon {
+    font-size: 1.75rem;
+    margin-right: 0.75rem;
+  }
+  
+  .button-level {
+    font-size: 0.95rem;
+  }
+  
+  .button-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Compact mode for smaller spaces */
+.engagement-controls.compact {
+  padding: 1rem;
+}
+
+.engagement-controls.compact .controls-header {
+  margin-bottom: 1rem;
+}
+
+.engagement-controls.compact .controls-title {
+  font-size: 1rem;
+}
+
+.engagement-controls.compact .engagement-buttons {
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.engagement-controls.compact .engagement-button {
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+}
+
+.engagement-controls.compact .button-icon {
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.engagement-controls.compact .button-content {
+  align-items: center;
+}
+
+.engagement-controls.compact .button-description {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .engagement-buttons {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  .engagement-button {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .button-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .button-content {
+    align-items: center;
+  }
+  
+  .button-description {
+    display: none;
+  }
+  
+  .active-indicator {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 16px;
+    height: 16px;
+    font-size: 0.75rem;
+  }
+}

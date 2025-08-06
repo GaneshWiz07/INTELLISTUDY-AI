@@ -1,0 +1,159 @@
+.emotion-timeline {
+  width: 100%;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.emotion-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-insights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.insight-section h4 {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.top-emotions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.emotion-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.emotion-name {
+  flex: 1;
+  font-weight: 500;
+  color: #374151;
+  text-transform: capitalize;
+}
+
+.percentage {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.summary-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.value {
+  font-weight: 600;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+  
+  .emotion-legend {
+    gap: 1rem;
+  }
+  
+  .emotion-insights {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .emotion-stat,
+  .stat {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .emotion-stat {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .emotion-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .legend-item {
+    justify-content: center;
+  }
+}
